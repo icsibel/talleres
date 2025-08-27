@@ -16,7 +16,7 @@ class Almacen:
         for i in range(self.dimension):
             for j in range(self.dimension):
                 if self.matriz[i][j] is None:
-                    self.matriz[i][j]=(nombre,precio,cantidad)
+                    self.matriz[i][j]={"nombre":nombre,"precio": precio, "cantidad": cantidad}
                     return True
         return False
 
@@ -30,7 +30,7 @@ class Almacen:
         for i in range(self.dimension):
             for j in range(self.dimension):
                 producto= self.matriz[i][j]
-                if producto[0] == nombre:
+                if producto["nombre"] == nombre:
                     print(f"el producto: {producto} esta en la fila: {i} y en la columna: {j}")
                     return (i,j)
                 

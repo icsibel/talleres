@@ -16,7 +16,7 @@ class Libreria:
         for i in range(self.dimension):
             for j in range(self.dimension):
                 if self.matriz[i][j] is None:
-                    self.matriz[i][j]=(titulo, autor, precio)
+                    self.matriz[i][j]={"titulo":titulo, "autor":autor, "precio": precio}
                     return True
         return False
 
@@ -32,10 +32,9 @@ class Libreria:
             for j in range(self.dimension):
                 libro=self.matriz[i][j]
                 if libro is not None:
-                    if mas_caro is None or libro[2]>mas_caro[2]:
+                    if mas_caro is None or libro["precio"]>mas_caro["precio"]:
                         mas_caro=libro
-                        print(f"el libro mas caro es {mas_caro}")
-        return mas_caro
+        print(f"el libro mas caro es {mas_caro}")
 
 libreria=Libreria(2) 
 libreria.crear()
