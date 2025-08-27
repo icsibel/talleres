@@ -18,7 +18,7 @@ class Teatro:
                 if self.matriz[i][j] is None:
                     self.matriz[i][j]=(numero, fila, precio)
                     return True
-        return False
+        return False 
     
     def mostrar_asientos(self):
         print("   ")
