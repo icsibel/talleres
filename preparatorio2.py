@@ -14,7 +14,7 @@ class Tienda:
                 self.producto=input("ingrese el producto a agregar: ")
                 self.cantidad=int(input("ingrese cantidad del producto: "))
                 filas.append({"producto":self.producto, "cantidad":self.cantidad})
-            self.matriz.append(filas)
+            self.matriz.append(filas) 
 
     def inventario(self):
         total=0
